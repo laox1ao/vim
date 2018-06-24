@@ -21,7 +21,7 @@ Plugin 'suan/vim-instant-markdown'
 Plugin 'nelstrom/vim-markdown-preview'
 "python sytax checker
 Plugin 'nvie/vim-flake8'
-Plugin 'vim-scripts/Pydiction'
+"Plugin 'vim-scripts/Pydiction'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'scrooloose/syntastic'
 
@@ -32,7 +32,7 @@ Plugin 'klen/rope-vim'
 "Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 ""code folding
-Plugin 'tmhedberg/SimpylFold'
+"Plugin 'tmhedberg/SimpylFold'
 
 "Colors!!!
 Plugin 'altercation/vim-colors-solarized'
@@ -86,6 +86,13 @@ set rnu
 set ruler
 set hlsearch
 set t_Co=256
+set splitbelow
+set splitright
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " 打开一个文件自动定位到上一次退出的位置
 if has("autocmd")
@@ -180,7 +187,7 @@ au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /^\t\+/
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " Wrap text after a certain number of characters
-au BufRead,BufNewFile *.py,*.pyw, set textwidth=100
+"au BufRead,BufNewFile *.py,*.pyw, set textwidth=100
 
 " Use UNIX (\n) line endings.
 au BufNewFile *.py,*.pyw,*.c,*.h set fileformat=unix
@@ -200,9 +207,9 @@ set backspace=indent,eol,start
 
 
 "Folding based on indentation:
-autocmd FileType python set foldmethod=indent
+"autocmd FileType python set foldmethod=indent
 "use space to open folds
-nnoremap <space> za 
+"nnoremap <space> za 
 "----------Stop python PEP 8 stuff--------------
 
 "js stuff"
